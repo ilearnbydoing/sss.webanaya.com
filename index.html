@@ -17,7 +17,9 @@
 <!-- Main CSS -->
 <link href="./assets/css/main.css" rel="stylesheet"/>
 <link href="./assets/css/custom.css" rel="stylesheet"/>
-
+<!-- ekko-lightbox -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+<!-- ekko-lightbox -->
 <!-- Animation CSS -->
 <link href="./assets/css/vendor/aos.css" rel="stylesheet"/>
 
@@ -117,7 +119,7 @@ HEADER
   <div class="container">
 <div class="row">
   <div class="col-md-12">
-    <h1 class="text-center pt-5 pb-5">About Our Company</h1>
+    <h1 class="text-center pt-5 pb-5 font-weight-bold">About Our Company</h1>
   </div>
   <div class="col-md-8">
     <h3>About SSS Import and Exports</h3>
@@ -160,7 +162,7 @@ HEADER
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="pt-5 pb-5 text-center">Our Products</h2>
+        <h2 class="pt-5 pb-5 text-center font-weight-bold">Our Products</h2>
       </div>
     </div>
     <div class="row">
@@ -194,16 +196,27 @@ HEADER
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="text-center pt-5 pb-5">Products Gallery</h2>
+        <h2 class="text-center pt-5 pb-5 font-weight-bold">Products Gallery</h2>
       </div>
     </div>
 		<div class="row text-center text-lg-left">
 
     <div class="col-lg-3 col-md-4 col-6">
-      <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
-          </a>
-    </div>
+			<a href="#gallerypic1" class="d-block mb-4 h-100" data-toggle="modal">
+		                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/oVjggVoG320/400x300" class="img-fluid">
+		            </a>
+								<!-- The modal itself -->
+<div class="modal fade" id="gallerypic1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+<img class="img-fluid img-thumbnail" src="https://source.unsplash.com/oVjggVoG320/600x300" class="img-fluid">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- The modal itself -->
+			</div>
     <div class="col-lg-3 col-md-4 col-6">
       <a href="#" class="d-block mb-4 h-100">
             <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
@@ -266,7 +279,7 @@ HEADER
   <div class="container">
     <div class="row">
     <div class="col-md-6">
-      <h2 class="text-center pt-5 pb-5">Contact Us</h2>
+      <h2 class="text-center pt-5 pb-5 font-weight-bold">Contact Us</h2>
       <h3>Address</h3>
       <p>
         <i class="fas fa-map-marker mr-2"></i>105, Master Mind, Royal Palms IV, AArry Milk Colony<br />
@@ -331,7 +344,9 @@ JAVASCRIPTS
 <script src="./assets/js/vendor/popper.min.js" type="text/javascript"></script>
 <script src="./assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
 <script src="./assets/js/functions.js" type="text/javascript"></script>
-
+<!-- ekko-lightbox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<!-- ekko-lightbox -->
 <!-- Animation -->
 <script src="./assets/js/vendor/aos.js" type="text/javascript"></script>
 <noscript>
@@ -358,6 +373,11 @@ AOS.init({
   }
 });
 </script>
-
+<script>
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+</script>
 </body>
 </html>
