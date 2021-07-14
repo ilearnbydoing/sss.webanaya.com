@@ -1,5 +1,2 @@
-# Simple bootstrap landing page
-Developed on top of Anchor - Bootstrap UI Kit
-Thank you for your support!
-
-
+## Simple business landing page
+Designed and developed by [DurgeshGupta.com](https://durgeshgupta.com) in association with [WebAnaya.com](https://www.webanaya.com) 
